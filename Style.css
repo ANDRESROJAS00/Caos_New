@@ -1,0 +1,6 @@
+.navbar {
+      background-color: red !important;
+    }
+    .navbar-brand img {
+      max-height: 90px;
+    }
