@@ -1,4 +1,33 @@
 .navbar{
-    
     background-color: red;
 }
+
+
+
+#carouselExampleIndicators1{
+    max-width: 500px;
+}
+#carouselExampleIndicators2{
+    max-width: 500px;
+}
+#carouselExampleIndicators3{
+    max-width: 500px;
+}
+#carouselExampleIndicators4{
+    max-width: 500px;
+}
+#carouselExampleIndicators5{
+    max-width: 500px;
+}
+#carouselExampleIndicators6{
+    max-width: 500px;
+}
+
+
+
+
+  .col-6 {
+    margin-bottom: 20px; /* Ajusta el margen entre las columnas */
+  }
+
+  
