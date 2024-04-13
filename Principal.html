@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,79 @@
   <!--LINK DE PRINCIPAL.CSS-->
   <link rel="stylesheet" href="principal.css">
   <!--CDN BOOTSTRAP-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
 
-  
-
   <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="caosreescalado.png" alt="Logo" class="mr-2"> 
-        
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="danger">
+    <div class="bg-dark p-4">
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Iniciar sesion
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="Principal.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Noticias.html">Noticias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Deportes.html">Deportes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Contactos.html">Contacto</a>
-          </li>
-        </ul>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Caos News</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <!-------Formulario------>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">No debes compartir tu informacion con nadie.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Acepto los terminos.</label>
+                </div>
+                
+              </form>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Aceptar</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!--ENLACES DE LA NAVBAR-->
+      <h5 class="text-white h4">
+        <a class="nav-link active text-white" aria-current="page" href="/Deportes.html">Deporte</a>
+
+        <a class="nav-link active text-white" aria-current="page" href="/Noticias.html">Pais</a>
+
+        <a class="nav-link active text-white" aria-current="page" href="/Contactos.html">Mundo</a>
+
+        <a class="nav-link active text-white" aria-current="page" href="/Principal.html">Economia</a>
+      </h5>
+      <span class="text-white">Proximamente mas actualizaciones.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-danger">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
 
@@ -48,29 +89,23 @@
 
 
 
-   <!-- Contenedor de las filas -->
-   <div class="container">
+
+
+
+
+  <div class="container">
     <div class="row justify-content-between my-4">
 
-      <!-- Primera fila -->
-      <div class="col-7">
-
-        <!-- Contenedor del primer carousel -->
+      <!-- Contenedor del primer carrusel -->
+      <div class="col-lg-7">
         <div id="carouselExampleIndicators1" class="carousel slide">
-           
-           <!-- Título 1 -->
-        <div class="col-12 text-center">
-          <h2><a href="#titulo1">Ultimas Noticias</a></h2>
-          <hr>
-        </div>
-    
-          <!--CAROUSEL 1-->
-        <div id="carouselExampleIndicators1" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <!-- Título 1 -->
+          <div class="col-12 text-center">
+            <h2><a href="#titulo1">Últimas Noticias</a></h2>
+            <hr>
           </div>
+
+          <!-- Carrusel de imágenes -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="/imagenes/554-1200x800.jpg" class="d-block w-100" alt="...">
@@ -82,69 +117,94 @@
               <img src="/imagenes/878-1200x800.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        
 
 
-        
-        <!-- Contenedor de las tarjetas con disposición horizontal -->
-        <div class="d-flex flex-row">
-          
-          <!-- Primera tarjeta -->
-          
-          <div class="card mx-2" style="width: 20rem;">
-            <img src="/imagenes/268-1200x800.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+        <!-- Dos tarjetas adicionales -->
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <!-- Primera tarjeta -->
+            <div class="card mb-3" style="width: 20rem;">
+              <img src="/imagenes/878-1200x800.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">Titulo de la primera Tarjeta</h3>
+                <p class="card-text">Contenido de la Primera tarjeta.</p>
+              </div>
             </div>
-          </div>
-          
-          <!-- Segunda tarjeta -->
-          <div class="card mx-2" style="width: 20rem;">
-            <img src="/imagenes/878-1200x800.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+            <!-- Título 1 -->
+            <div class="col-12 text-center">
+              <h2><a href="#titulo1">Economia</a></h2>
+              <hr>
             </div>
+
           </div>
 
-        </div>
+          <div class="col-lg-5">
+            <!-- Segunda tarjeta -->
+            <div class="card mb-3" style="width: 20rem;">
+              <img src="/imagenes/268-1200x800.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">Título de la segunda Tarjeta</h3>
+                <p class="card-text">Contenido de la Segunda tarjeta.</p>
+              </div>
+            </div>
 
+            <!-- Título 2 -->
+            <div class="col-12 text-center">
+              <h2><a href="#titulo1">Deporte</a></h2>
+              <hr>
+            </div>
 
+          </div>
         </div>
       </div>
 
-      <!-- Segunda fila -->
-      <div class="col-5">
-        <!-- Contenedor del primer carousel -->
-        <div id="carouselExampleIndicators2" class="carousel slide">
-            <!-- Título 2 -->
-        <div class="col-12 text-center">
-          <h2><a href="#titulo2">Pais</a></h2>
-          <hr>
-        </div>
-        
-           <!-- Tercera tarjeta -->
-           <div class="card" style="width: 30rem;">
+      <!-- Contenedor de las tarjetas con disposición horizontal -->
+      <div class="col-lg-5">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+
+          <!-- Título 3 -->
+          <div class="col-12 text-center">
+            <h2><a href="#titulo2">País</a></h2>
+            <hr>
+          </div>
+
+          <!-- Tercera tarjeta -->
+          <div class="col-12 mb-3" style="width: 20rem;">
             <img src="/imagenes/878-1200x800.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h3 class="card-title">Título de la Tercera Tarjeta</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
             </div>
           </div>
 
-          <hr>
+          <!-- Título 4 -->
+          <div class="col-12 text-center">
+            <h2><a href="#titulo1">Mundo</a></h2>
+            <hr>
+          </div>
+
           <!-- Cuarta tarjeta -->
-          <div class="card" style="width: 30rem;">
+          <div class="col-12 mb-3" style="width: 20rem;">
             <img src="/imagenes/554-1200x800.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h3 class="card-title">Título de la Cuarta Tarjeta</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
             </div>
           </div>
 
@@ -154,13 +214,41 @@
     </div>
   </div>
 
- 
+
+
+  <!--PIE DE PAGINA -->
+  <div>
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Creditos</h5>
+            <p>Este sitio web fue creado por Caos News. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Información de Contacto</h5>
+            <p>Dirección: mi casita</p>
+            <p>Teléfono: 12345678</p>
+            <p>Correo electrónico: caosnews@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Redes Sociales</h5>
+            <ul class="list-unstyled">
+              <li><a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/?lang=es" target="_blank">Twitter</a></li>
+              <li><a href="https://plus.google.com/share?url%253Dhttp://culturmag.de/crimemag/berliner-filmfestspiele-2017-ein-erster-blick/98673%26gpsrc%3Dgplp0" target="_blank">Google+</a></li>
+              <li><a href="https://cl.linkedin.com/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
 
 
 
- 
-  
 
 
 
@@ -177,6 +265,15 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

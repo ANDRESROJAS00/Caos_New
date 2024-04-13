@@ -1,42 +1,13 @@
-.navbar{
-    background-color: red;
-}
 
 
-
-#carouselExampleIndicators1{
-    max-width: 700px;
-}
-#carouselExampleIndicators2{
-    max-width: 500px;
-}
-#carouselExampleIndicators3{
-    max-width: 500px;
-}
-#carouselExampleIndicators4{
-    max-width: 500px;
-}
-#carouselExampleIndicators5{
-    max-width: 500px;
-}
-#carouselExampleIndicators6{
-    max-width: 500px;
-}
 
 hr {
-    height: 20px; /* Grosor de la línea */
+    height: 20px;
+    /* Grosor de la línea */
     background-color: #000000;
-    margin: 20px;
-  }
-  
-  .card{
-    margin-top: 10%;
-  }
-  
-  
-  
-  .col-6 {
-    margin-bottom: 20px; /* Ajusta el margen entre las columnas */
-  }
+}
 
-  
+.card {
+    margin-top: 10%;
+}
+
