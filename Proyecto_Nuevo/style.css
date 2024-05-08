@@ -27,3 +27,8 @@ div {
     background-color: rgb(52 58 64) !important;
 }
 
+
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
