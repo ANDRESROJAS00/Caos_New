@@ -1,0 +1,29 @@
+body {
+    background-color: #212529;
+    color: white;
+    margin: 0px 20vh 20px 20vh;
+}
+
+/* Media query para pantallas pequeñas (por ejemplo, celulares) */
+@media (max-width: 677px) {
+    body {
+        margin: 0; /* Eliminar el margen en pantallas pequeñas */
+    }
+}
+
+header {
+    margin-bottom: 20px;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.text-body-emphasis {
+    color: #fff !important;
+}
+.bg-body-secondary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(52 58 64) !important;
+}
+
