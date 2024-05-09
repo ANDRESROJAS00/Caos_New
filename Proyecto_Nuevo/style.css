@@ -4,19 +4,8 @@ body {
     margin: 0px 20vh 20px 20vh;
 }
 
-/* Media query para pantallas pequeñas (por ejemplo, celulares) */
-@media (max-width: 677px) {
-    body {
-        margin: 0; /* Eliminar el margen en pantallas pequeñas */
-    }
-}
-
 header {
     margin-bottom: 20px;
-}
-div {
-    display: block;
-    unicode-bidi: isolate;
 }
 
 .text-body-emphasis {
@@ -30,5 +19,21 @@ div {
 
 .card {
     margin-top: 20px;
-    margin-bottom: 20px;
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item img {
+    object-fit: cover; /* Ajuste de tamaño de las imágenes dentro del carousel */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* Media query para pantallas pequeñas (por ejemplo, celulares) */
+@media (max-width: 872px) {
+    body {
+        margin: 0; /* Eliminar el margen en pantallas pequeñas */
+    }
 }
