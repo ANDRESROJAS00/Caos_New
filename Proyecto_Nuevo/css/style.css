@@ -1,7 +1,7 @@
 body {
     background-color: #212529;
     color: white;
-    margin: 0px 20vh 20px 20vh;
+    margin: 0px 20vh 30vh 20vh;
 }
 
 header {
@@ -12,13 +12,6 @@ header {
     max-height: 600px;
     overflow-y: auto;
     text-align: justify;
-}
-
-
-@media (max-width: 991px) {
-    #carouselExampleSlidesOnly {
-        margin-bottom: 20px;
-    }
 }
 
 @media (max-width: 991px) {
