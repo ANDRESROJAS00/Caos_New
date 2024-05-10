@@ -8,30 +8,12 @@ header {
     margin-bottom: 20px;
 }
 
-.text-body-emphasis {
-    color: #fff !important;
-}
-.bg-body-secondary {
-    --bs-bg-opacity: 1;
-    background-color: rgb(52 58 64) !important;
-}
-
-.card {
-    margin-top: 20px;
-}
-
-.text-conteiner {
-    height: 700px;
+.texto-carousel {
+    max-height: 600px;
     overflow-y: auto;
+    text-align: justify;
 }
 
-.text-conteiner .texto-carousel p{
-    text-transform: capitalize;
-}
-
-.separador {
-    margin: 10px 0 10px 0;
-}
 
 @media (max-width: 991px) {
     #carouselExampleSlidesOnly {
@@ -43,12 +25,11 @@ header {
     .card {
         margin: 10px 10px 10px 10px;
         max-width: 85%;
-
     }
 }
 
 /* Media query para pantallas pequeñas (por ejemplo, celulares) */
-@media (max-width: 991px) {
+@media (max-width: 1598px) {
     body {
         margin: 0; /* Eliminar el margen en pantallas pequeñas */
     }
