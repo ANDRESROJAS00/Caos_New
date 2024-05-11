@@ -26,7 +26,8 @@
 
 
     <div class="container">
-        <form class="row g-3 mt-3">
+
+        <form class="row g-3 mt-3 needs-validation" novalidate>
             <div class="col-md-6">
                 <label for="emailInput" class="form-label">Email</label>
                 <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
@@ -39,12 +40,13 @@
 
             <div class="col-12">
                 <label for="inputAdress" class="form-label">Direccion</label>
-                <input type="text" class="form-control" id="inputAdress" placeholder="Direccion">
+                <input type="text" class="form-control" id="inputAdress" placeholder="Direccion" required>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="col-12">
-                <label for="inputAdress" class="form-label">Direccion 2</label>
-                <input type="text" class="form-control" id="inputAdress" placeholder="Direccion">
+                <label for="inputAdress2" class="form-label">Direccion 2</label>
+                <input type="text" class="form-control" id="inputAdress2" placeholder="Direccion">
             </div>
 
             <div class="col-md-6">
@@ -67,7 +69,7 @@
             </div>
 
             <div class="col-12">
-                <a href="/index.html" class="btn btn-primary">Registrarse</a>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
             </div>
         </form>
     </div>
@@ -75,16 +77,14 @@
 
 
     <footer>
-        
+
     </footer>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/javascript/navbar_pie_de_pagina.js"></script>
+    <script src="/javascript/validacion.js"></script>
 </body>
 
 </html>
