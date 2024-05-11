@@ -8,8 +8,32 @@
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
             // Select the input element for address
+            const inputEmail = form.querySelector('#emailInput')
+            const passwordInput = form.querySelector('#inputPass')
             const addressInput = form.querySelector('#inputAdress');
-            
+            const addressInput2 = form.querySelector('#inputAdress2');
+            const inputCity = form.querySelector('#cityInput');
+            const inputPostalCode = form.querySelector('#postalCodeInput');
+            const inputCountry = form.querySelector('#countryInput');
+            const inputCheckTerms = form.querySelector('#checkTerms');
+
+
+
+
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(inputEmail.value.trim())) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                inputEmail.classList.add('is-invalid');
+                inputEmail.nextElementSibling.innerHTML = 'Ingrese un correo electrónico válido.';
+            } else {
+                inputEmail.classList.add('is-invalid');
+                inputEmail.nextElementSibling.innerHTML = '';
+            }
+
+
             // Check if the address input is empty or has less than 5 characters
             if (addressInput.value.trim().length < 5) {
                 // If the address input is empty or has less than 5 characters, prevent form submission

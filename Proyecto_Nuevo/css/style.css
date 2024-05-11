@@ -9,7 +9,8 @@ header {
 }
 
 .texto-carousel {
-    max-height: 600px;
+    max-height: 500px;
+    max-width: 500px;
     overflow-y: auto;
     text-align: justify;
 }
