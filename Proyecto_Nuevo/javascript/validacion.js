@@ -18,8 +18,6 @@
             const inputCheckTerms = form.querySelector('#checkTerms');
 
 
-
-
             /*---==VALIDACION EMAIL==---*/
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(inputEmail.value.trim())) {
@@ -140,24 +138,6 @@
                 inputCheckTerms.classList.remove('is-invalid'); // Si se ha marcado el checkbox, quita la clase 'is-invalid'
                 inputCheckTerms.nextElementSibling.innerHTML = ''; // Borra el mensaje de error
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             form.classList.add('was-validated');
