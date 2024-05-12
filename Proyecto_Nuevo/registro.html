@@ -30,12 +30,14 @@
         <form class="row g-3 mt-3 needs-validation" novalidate>
             <div class="col-md-6">
                 <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
+                <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email" required>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="col-md-6">
                 <label for="inputPass" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="inputPass" placeholder="Escribe tu contraseña">
+                <input type="password" class="form-control" id="inputPass" placeholder="Escribe tu contraseña" required>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="col-12">
@@ -46,25 +48,33 @@
 
             <div class="col-12">
                 <label for="inputAdress2" class="form-label">Direccion 2</label>
-                <input type="text" class="form-control" id="inputAdress2" placeholder="Direccion">
+                <input type="text" class="form-control" id="inputAdress2" placeholder="Direccion" required>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="col-md-6">
                 <label for="cityInput" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="cityInput" placeholder="Ciudad">
+                <input type="text" class="form-control" id="cityInput" placeholder="Ciudad" required>
+                <div class="invalid-feedback"></div>
             </div>
+
             <div class="col-md-3">
                 <label for="postalCodeInput" class="form-label">Codigo Postal</label>
-                <input type="text" class="form-control" id="postalCodeInput" placeholder="Codigo Postal">
+                <input type="text" class="form-control" id="postalCodeInput" placeholder="Codigo Postal"required>
+                <div class="invalid-feedback"></div>
             </div>
+
             <div class="col-md-3">
                 <label for="countryInput" class="form-label">Pais</label>
-                <input type="text" class="form-control" id="countryInput" placeholder="Pais">
+                <input type="text" class="form-control" id="countryInput" placeholder="Pais" required>
+                <div class="invalid-feedback"></div>
             </div>
+
             <div class="col-12">
                 <div class="form-check">
                     <label for="checkTerms" class="form-check-label">Acepto los términos</label>
                     <input type="checkbox" id="checkTerms" class="form-check-input">
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
 
