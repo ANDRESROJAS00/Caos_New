@@ -13,10 +13,10 @@ header.innerHTML = `
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/formulario.html">Iniciar sesion</a>
+                            <a class="nav-link text-danger" href="/registro.html">Iniciar sesion</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/registro.html">Registrarse</a>
+                            <a class="nav-link text-danger" href="/carrito.html">Carrito</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link active text-light" aria-current="page" href="#">Programacion</a>
