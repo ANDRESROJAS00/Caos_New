@@ -4,7 +4,7 @@ const footer = document.querySelector("footer");
 header.innerHTML = `
 <nav class="navbar navbar-expand-lg bg-transparent p-4">
             <div class="container-fluid justify-content-between">
-                <a class="navbar-brand text-light fs-2" href="#">CAOS NEWS</a>
+                <a class="navbar-brand text-light fs-2" href="/index.html">CAOS NEWS</a>
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -13,10 +13,10 @@ header.innerHTML = `
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/formulario.html">Iniciar sesion</a>
+                            <a class="nav-link text-danger" href="/registro.html">Iniciar sesion</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/registro.html">Registrarse</a>
+                            <a class="nav-link text-danger" href="/carrito.html">Carrito</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link active text-light" aria-current="page" href="#">Programacion</a>

@@ -1,59 +1,116 @@
-(() => {
-    'use strict';
+$(document).ready(function () {
+    $('.needs-validation').submit(function (event) {
+        var form = $(this);
+        var isValid = true;
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation');
+        // Validación de email
+        var inputEmail = $('#emailInput', form);
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(inputEmail.val().trim())) {
+            isValid = false;
+            inputEmail.addClass('is-invalid');
+            inputEmail.next().html('Ingrese un correo electrónico válido.');
+        } else {
+            inputEmail.removeClass('is-invalid');
+            inputEmail.next().html('');
+        }
 
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            // Select the input element for address
-            const inputEmail = form.querySelector('#emailInput')
-            const passwordInput = form.querySelector('#inputPass')
-            const addressInput = form.querySelector('#inputAdress');
-            const addressInput2 = form.querySelector('#inputAdress2');
-            const inputCity = form.querySelector('#cityInput');
-            const inputPostalCode = form.querySelector('#postalCodeInput');
-            const inputCountry = form.querySelector('#countryInput');
-            const inputCheckTerms = form.querySelector('#checkTerms');
+        // Validación de contraseña
+        var passwordInput = $('#inputPass', form);
+        if (passwordInput.val().trim().length < 6) {
+            isValid = false;
+            passwordInput.addClass('is-invalid');
+            passwordInput.next().html('La contraseña debe tener al menos 6 caracteres.');
+        } else {
+            passwordInput.removeClass('is-invalid');
+            passwordInput.next().html('');
+        }
+
+        // Resto de las validaciones...
+
+        // Validación de dirección
+        var addressInput = $('#inputAdress', form);
+        if (addressInput.val().trim().length < 5) {
+            isValid = false;
+            addressInput.addClass('is-invalid');
+            addressInput.next().html('La dirección debe tener al menos 5 caracteres.');
+        } else {
+            addressInput.removeClass('is-invalid');
+            addressInput.next().html('');
+        }
+
+        // Validación de dirección 2
+        var addressInput2 = $('#inputAdress2', form);
+        if (addressInput2.val().trim().length < 5) {
+            isValid = false;
+            addressInput2.addClass('is-invalid');
+            addressInput2.next().html('La dirección debe tener al menos 5 caracteres.');
+        } else {
+            addressInput2.removeClass('is-invalid');
+            addressInput2.next().html('');
+        }
+
+        // Validación de ciudad
+        var inputCity = $('#cityInput', form);
+        if (inputCity.val().trim().length < 4) {
+            isValid = false;
+            inputCity.addClass('is-invalid');
+            inputCity.next().html('La ciudad debe tener al menos 4 caracteres.');
+        } else {
+            inputCity.removeClass('is-invalid');
+            inputCity.next().html('');
+        }
+
+        // Validación de código postal
+        var inputPostalCode = $('#postalCodeInput', form);
+        var postalCodeRegex = /^\d+$/;
+        if (!postalCodeRegex.test(inputPostalCode.val().trim())) {
+            isValid = false;
+            inputPostalCode.addClass('is-invalid');
+            inputPostalCode.next().html('El código postal debe contener solo números.');
+        } else if (inputPostalCode.val().trim().length < 4) {
+            isValid = false;
+            inputPostalCode.addClass('is-invalid');
+            inputPostalCode.next().html('El código postal debe tener al menos 4 caracteres.');
+        } else {
+            inputPostalCode.removeClass('is-invalid');
+            inputPostalCode.next().html('');
+        }
+
+        // Validación de país
+        var inputCountry = $('#countryInput', form);
+        if (inputCountry.val().trim().length < 4) {
+            isValid = false;
+            inputCountry.addClass('is-invalid');
+            inputCountry.next().html('El país debe tener al menos 4 caracteres.');
+        } else {
+            inputCountry.removeClass('is-invalid');
+            inputCountry.next().html('');
+        }
+
+        // Validación de aceptación de términos
+        var inputCheckTerms = $('#checkTerms', form);
+        if (!inputCheckTerms.prop('checked')) {
+            isValid = false;
+            inputCheckTerms.addClass('is-invalid');
+            inputCheckTerms.next().html('Debes aceptar los términos para continuar.');
+        } else {
+            inputCheckTerms.removeClass('is-invalid');
+            inputCheckTerms.next().html('');
+        }
+
+       
+        if (!isValid) {
+            event.preventDefault();
+            event.stopPropagation();
+            alert('Faltan campos por rellenar.');
+        } else {
+            alert('Registrado correctamente');
+            console.log('Registrado correctamente');
+        }
+        
 
 
-
-
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(inputEmail.value.trim())) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                inputEmail.classList.add('is-invalid');
-                inputEmail.nextElementSibling.innerHTML = 'Ingrese un correo electrónico válido.';
-            } else {
-                inputEmail.classList.add('is-invalid');
-                inputEmail.nextElementSibling.innerHTML = '';
-            }
-
-
-            // Check if the address input is empty or has less than 5 characters
-            if (addressInput.value.trim().length < 5) {
-                // If the address input is empty or has less than 5 characters, prevent form submission
-                event.preventDefault();
-                event.stopPropagation();
-
-                // Add Bootstrap's is-invalid class to show the input as invalid
-                addressInput.classList.add('is-invalid');
-
-                // Add a custom error message
-                addressInput.nextElementSibling.innerHTML = 'La dirección debe tener al menos 5 caracteres.';
-            } else {
-                // If the address input has 5 or more characters, remove the is-invalid class
-                addressInput.classList.remove('is-invalid');
-
-                // Reset the error message
-                addressInput.nextElementSibling.innerHTML = '';
-            }
-
-            form.classList.add('was-validated');
-        }, false);
+        form.addClass('was-validated');
     });
-})();
+});
