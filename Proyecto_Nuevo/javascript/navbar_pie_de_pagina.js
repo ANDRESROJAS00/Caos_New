@@ -19,16 +19,19 @@ header.innerHTML = `
                             <a class="nav-link text-danger" href="/carrito.html">Carrito</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Programacion</a>
+                            <a class="nav-link active text-light" href="/programacion.html">Programacion</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="#">Seguridad</a>
+                            <a class="nav-link text-light" href="/seguridad.html">Seguridad</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="#">Chile</a>
+                            <a class="nav-link text-light" href="/chile.html">Chile</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="#">Mundo</a>
+                            <a class="nav-link text-light" href="/mundo.html">Mundo</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link text-light" href="/API.html">Clima</a>
                         </li>
                     </ul>
                 </div>
