@@ -1,0 +1,165 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+:root {
+	background: #0A0618;
+	text-decoration-color: #F3F6F5;
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #0A0618;
+	color: #fff;
+}
+
+
+.bubbles {
+	position: fixed;
+	display: flex;
+}
+
+.bubbles span {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: #4fc3dc;
+	margin: 0 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px #4fc3dc44,
+	0 0 50px #4fc3dc,
+	0 0 100px #4fc3dc;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(120s / var(--i))
+}
+.bubbles span:nth-child(even) {
+	background: #ff2d75;
+	box-shadow: 0 0 0 10px #ff2d7544,
+	0 0 50px #ff2d75,
+	0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+	0% 
+	{
+		transform: translateY(100vh) scale(0);
+	}
+	100% 
+	{
+		transform: translateY(-10vh) scale(1);
+	}
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin-bottom: 0.75rem;
+	line-height: 1.2rem;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	padding: 0px;
+	border-top: 1px solid grey;
+	width: 100%;
+	text-align: center;
+}
+
+.search-form {
+	margin: 20px 20px;
+}
+
+.searchbox {
+	padding: 10px 20px;
+	max-width: 480px;
+	margin: 0 auto;
+	border-radius: 20px;
+ 
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-style: outset;
+    border-color: grey;
+    -webkit-backdrop-filter: blur(5pxs);
+    transition: all 300ms;
+
+}
+
+.search {
+	width: 100%;
+	border: none;
+	font-size: 1rem;
+	background-color: transparent;
+	color: #fff;
+}
+
+.search:focus {
+	outline: none;
+}
+
+.weather-card {
+	margin: 20px 20px;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	border-radius: 20px;
+
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border-style: outset;
+    -webkit-backdrop-filter: blur(5pxs);
+
+    display: none;
+
+}
+
+
+.city {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	margin-bottom: 0.7rem;
+}
+
+.date {
+	font-size: 1rem;
+}
+
+.temperature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.temp-img {
+	width: 150px;
+	margin: 20px;
+	transition: 3s;
+}
+
+.temp {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+.weather {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	margin: -30px;
+}
+
+.range {
+	margin: 29px;
+}

@@ -1,0 +1,40 @@
+body {
+    background-color: #212529;
+    color: white;
+    margin: 0px 20vh 30vh 20vh;
+}
+
+header {
+    margin-bottom: 20px;
+    
+}
+
+.texto-carousel {
+    max-height: 600px;
+    max-width: 100%;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+
+
+.contenedor-chile .columna-texto .parrafos-c {
+    max-height: 550px;
+    max-width: 100%;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+@media (max-width: 991px) {
+    .card {
+        margin: 10px 10px 10px 10px;
+        max-width: 85%;
+    }
+}
+
+/* Media query para pantallas pequeñas (por ejemplo, celulares) */
+@media (max-width: 1598px) {
+    body {
+        margin: 0; /* Eliminar el margen en pantallas pequeñas */
+    }
+}
