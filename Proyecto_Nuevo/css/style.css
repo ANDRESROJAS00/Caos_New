@@ -11,30 +11,7 @@ header {
     
 }
 
-/* Carousel styles */
-.carousel {
-    height: 100%; /* Ensures the carousel takes the full height */
-}
 
-.carousel-inner {
-    height: 100%;
-}
-
-.carousel-item {
-    height: 100%;
-}
-
-.carousel-item img {
-    object-fit: cover; /* Ensures the image covers the entire carousel item */
-    height: 100%;
-    width: 100%;
-}
-.texto-carousel {
-    max-height: 570px;
-    max-width: 98%;
-    overflow-y: auto;
-    text-align: justify;
-}
 
 
 
@@ -52,9 +29,3 @@ header {
     }
 }
 
-@media (max-width: 767px) {
-    .texto-carousel,
-    .carousel-inner {
-        max-height: none;
-    }
-}
