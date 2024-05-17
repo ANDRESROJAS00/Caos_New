@@ -20,7 +20,10 @@ function actualizarCarrito() {
     // Llenar la lista del carrito
     carrito.forEach((precio, index) => {
         const li = document.createElement('li');
-        li.textContent = `Producto ${index + 1} - $${precio}`;
+        li.classList.add("d-flex", "justify-content-between", "align-items-center");
+
+        li.innerHTML = `Producto ${index + 1} - $${precio} 
+                        <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${index})">Eliminar</button>`;
         listaCarrito.appendChild(li);
     });
 }
@@ -30,9 +33,15 @@ function vaciarCarrito() {
     actualizarCarrito();
 }
 
+function eliminarProducto(indice) {
+    carrito.splice(indice, 1); // Elimina un elemento del array en el índice dado
+    actualizarCarrito();
+}
+
 function comprar() {
     alert("Compra realizada");
 }
+
 
 
 
