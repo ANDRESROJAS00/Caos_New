@@ -2,9 +2,15 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 
 header.innerHTML = `
-<nav class="navbar navbar-expand-lg bg-transparent p-4">
+<nav class="navbar navbar-expand-xl bg-transparent p-4">
             <div class="container-fluid justify-content-between">
-                <a class="navbar-brand text-light fs-2" href="/index.html">CAOS NEWS</a>
+                <!-- Logo -->
+                <a class="navbar-brand text-light fs-2 d-none d-xl-block" href="/index.html">
+                    <img src="imagenes/CAOSNEWS.png" alt="Caos News Logo" width="250" height="140">
+                </a>
+                <!-- Título para pantallas pequeñas -->
+                <span class="navbar-brand text-light fs-2 d-xl-none">CAOS NEWS</span>
+                <!-- Botón de colapso -->
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">

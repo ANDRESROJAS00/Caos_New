@@ -26,7 +26,6 @@ $(document).ready(function () {
             passwordInput.next().html('');
         }
 
-        // Resto de las validaciones...
 
         // Validación de dirección
         var addressInput = $('#inputAdress', form);
