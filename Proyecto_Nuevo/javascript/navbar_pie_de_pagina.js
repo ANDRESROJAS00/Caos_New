@@ -28,7 +28,7 @@ header.innerHTML = `
                             <a class="nav-link active text-light" href="/deportes.html">Deportes</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="/seguridad.html">Seguridad</a>
+                            <a class="nav-link text-light" href="/economia.html">Economia</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link text-light" href="/chile.html">Chile</a>
