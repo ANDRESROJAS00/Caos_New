@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,36 +12,36 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/piedepagina.css">
+    <link rel="stylesheet" href="{% static 'css/carrito.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/piedepagina.css' %}">
 </head>
 <body>
 
     <header>
-
+        
     </header>
 
     <h1>Carrito de Compras</h1>
     <div id="productos" class="row">
         <div class="col">
             <div class="producto">
-                <img src="/imagenes/suscri1.webp" alt="Suscripción">
+                <img src="{% static 'img/suscri1.webp' %}" alt="Suscripción">
                 <span>Suscripción $5.000</span>
                 <button onclick="agregarProducto(5000)">Agregar</button>
             </div>
         </div>
         <div class="col">
             <div class="producto">
-                <img src="/imagenes/publicidad1.jpg" alt="Publicidad">
-                <span>Publicidad  $20.000</span>
+                <img src="{% static 'img/publicidad1.jpg' %}" alt="Publicidad">
+                <span>Publicidad $20.000</span>
                 <button onclick="agregarProducto(20000)">Agregar</button>
             </div>
         </div>
         <div class="col">
             <div class="producto">
-                <img src="/imagenes/mill.avif" alt="Producto 3">
-                <span>Compra tu numero $5.000</span>
+                <img src="{% static 'img/mill.avif' %}" alt="Producto 3">
+                <span>Compra tu número $5.000</span>
                 <button onclick="agregarProducto(5000)">Agregar</button>
             </div>
         </div>
@@ -55,15 +56,16 @@
     </div>
 
     <footer class="footer">
-
+        
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-     <!---==SCRIPT NAVBAR PIE DE PAGINA==--->
-     <script src="/javascript/navbar_pie_de_pagina.js"></script>
-    <script src="/javascript/carrito.js"></script>
+    <!---==SCRIPT NAVBAR PIE DE PAGINA==--->
+    <script src="{% static 'js/navbar_pie_de_pagina.js' %}"></script>
+    <script src="{% static 'js/carrito.js' %}"></script>
 </body>
 </html>
+
 

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/apiStyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/apiReset.css' %}" />
+    <title>Clima</title>
+</head>
+
+<body>
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+    </div>
+    <main>
+        <div class="search-form">
+            <form id="search-form">
+                <div class="searchbox">
+                    <input type="text" autocomplete="off" placeholder="Buscar Ciudad..." class="search" id="searchbox" />
+                </div>
+            </form>
+        </div>
+        <div class="weather-card" id="card">
+            <div class="city" id="city">Chile, cl</div>
+            <div class="date" id="date">13/105/2024</div>
+            <div class="temperature">
+                <img src="{% static 'animated/temp-low.png' %}" class="temp-img" id="temp-img" />
+                <div class="temp" id="temp">14c</div>
+            </div>
+            <div class="weather" id="weather">Sol</div>
+            <div class="range" id="range">12c / 18c</div>
+        </div>
+    </main>
+    <footer>
+        <p>Creado por <a href="">CaosNews</a></p>
+        <p>Todos los Derechos Reservados</p>
+    </footer>
+    <!-- Script para cargar las rutas de las imágenes dinámicamente -->
+    <script>
+        const tempLowImg = "{% static 'animated/temp-low.png' %}";
+        const tempMidImg = "{% static 'animated/temp-mid.png' %}";
+        const tempHighImg = "{% static 'animated/temp-high.png' %}";
+    </script>
+    <script src="{% static 'js/scriptAPI.js' %}"></script>
+</body>
+
+</html>
+
+

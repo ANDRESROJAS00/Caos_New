@@ -1,3 +1,4 @@
+
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 
@@ -5,39 +6,39 @@ header.innerHTML = `
 <nav class="navbar navbar-expand-xl bg-transparent p-4">
             <div class="container-fluid justify-content-between">
                 <!-- Logo -->
-                <a class="navbar-brand text-light fs-2 d-none d-xl-block" href="/index.html">
-                    <img src="imagenes/CAOSNEWS.png" alt="Caos News Logo" width="250" height="140">
+                <a class="navbar-brand text-light fs-2 d-none d-xl-block" href="{% url 'index' %}">
+                    <img src="{% static 'img/CAOSNEWS.png' %}" alt="Caos News Logo" width="250" height="140">
                 </a>
                 <!-- Título para pantallas pequeñas -->
                 <span class="navbar-brand text-light fs-2 d-xl-none">CAOS NEWS</span>
                 <!-- Botón de colapso -->
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/registro.html">Iniciar sesion</a>
+                            <a class="nav-link text-danger" href="{% url 'registro' %}">Iniciar sesión</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-danger" href="/carrito.html">Carrito</a>
+                            <a class="nav-link text-danger" href="{% url 'carrito' %}">Carrito</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link active text-light" href="/deportes.html">Deportes</a>
+                            <a class="nav-link active text-light" href="{% url 'deportes' %}">Deportes</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="/economia.html">Economia</a>
+                            <a class="nav-link text-light" href="{% url 'economia' %}">Economía</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="/chile.html">Chile</a>
+                            <a class="nav-link text-light" href="{% url 'chile' %}">Chile</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="/mundo.html">Mundo</a>
+                            <a class="nav-link text-light" href="{% url 'mundo' %}">Mundo</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link text-light" href="/API.html">Clima</a>
+                            <a class="nav-link text-light" href="{% url 'api' %}">Clima</a>
                         </li>
                     </ul>
                 </div>

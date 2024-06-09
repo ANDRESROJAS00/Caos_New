@@ -24,7 +24,9 @@
 <body>
     <!---==NAVBAR==--->
     <header>
+        {% include 'usuariosCaos/navbar.html' %}
     </header>
+    
 
     <!---==CAROUSEL==--->
     <div class="container-fluid carousel">
@@ -33,15 +35,15 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/imagenes/Carolina-Tohá-junto-a-la-PDI.jpg"
+                            <img src="{% static 'img/Carolina-Tohá-junto-a-la-PDI.jpg' %}"
                                 class="d-block w-100 object-fit-lg-contain border rounded" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/Carolina-Tohá.jpeg"
+                            <img src="{% static 'img/Carolina-Tohá.jpeg' %}"
                                 class="d-block w-100 object-fit-lg-contain border rounded" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/Eduardo-Cerna-1.jpeg"
+                            <img src="{% static 'img/Eduardo-Cerna-1.jpeg' %}"
                                 class="d-block w-100 object-fit-lg-contain border rounded" alt="...">
                         </div>
                     </div>
@@ -74,7 +76,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4 cards">
         <div class="col">
             <div class="card h-100 mx-auto">
-                <img src="/imagenes/MONA-LISA-740x430.png" class="card-img-top" alt="...">
+                <img src="{% static 'img/MONA-LISA-740x430.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Descubren dónde está ambientada la Mona Lisa</h5>
                     <p class="card-text">Una geóloga e historiadora del arte especializada en Leonardo y el Renacimiento
@@ -88,7 +90,7 @@
         </div>
         <div class="col">
             <div class="card h-100 mx-auto">
-                <img src="/imagenes/matias-muchnick--740x430.jpg" class="card-img-top" alt="...">
+                <img src="{% static 'img/matias-muchnick--740x430.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Matías Muchinick, CEO de NotCo, es destacado por la revita Time como uno de
                         los líderes de la próxima generación</h5>
@@ -103,7 +105,7 @@
         </div>
         <div class="col">
             <div class="card h-100 mx-auto">
-                <img src="/imagenes/Reciclaje-740x430.jpg" class="card-img-top" alt="...">
+                <img src="{% static 'img/Reciclaje-740x430.jpg'%}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Gobierno proyecta que Chile reciclará el 75% de sus residuos para 2040</h5>
                     <p class="card-text">En el marco del Día Mundial del Reciclaje, el Ministerio del Medio Ambiente dio
@@ -150,15 +152,15 @@
 
     <!---==PIE DE PAGINA==--->
     <footer class="footer">
-       
+        {% include 'usuariosCaos/footer.html' %}
     </footer>
 
     <!---==SCRIPT BOOTSTRAP==--->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-     <script src="{% static 'js/navbar_pie_de_pagina.js'%}"></script>
-    
+
+    <!---==SCRIPT MODAL==--->
     <script src="{% static 'js/modal.js'%}"></script>
 </body>
 
