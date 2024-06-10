@@ -19,7 +19,7 @@
 <body>
 
     <header>
-        
+        {% include 'usuariosCaos/navbar.html' %}
     </header>
 
     <h1>Carrito de Compras</h1>
@@ -56,14 +56,13 @@
     </div>
 
     <footer class="footer">
-        
+        {% include 'usuariosCaos/footer.html' %}
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!---==SCRIPT NAVBAR PIE DE PAGINA==--->
-    <script src="{% static 'js/navbar_pie_de_pagina.js' %}"></script>
     <script src="{% static 'js/carrito.js' %}"></script>
 </body>
 </html>

@@ -15,19 +15,20 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <!---==CSS==--->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/piedepagina.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/piedepagina.css'%}">
 </head>
 
 <body>
     <!---==NAVBAR==--->
     <header>
+        {% include 'usuariosCaos/navbar.html' %}
     </header>
 
     <div class="container-fluid contenedor-chile">
         <div class="row">
             <div class="col-12 col-lg-12 col-xl-6">
-                <img src="/imagenes/applee.webp" class="img-fluid" alt="...">
+                <img src="{% static 'img/applee.webp' %}" class="img-fluid" alt="...">
             </div>
 
             <div class="col-12 col-xl-6 columna-texto">
@@ -58,6 +59,7 @@
 
     <!---==PIE DE PAGINA==--->
     <footer class="footer">
+        {% include 'usuariosCaos/footer.html' %}
     </footer>
 
     <!---==SCRIPT BOOTSTRAP==--->
@@ -69,9 +71,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz4fnFO9gybBogGz8EJDOMZNqBq4UcPzO7rK6p1h7aSWNh5L5C5v6pQ6QF"
         crossorigin="anonymous"></script>
-
-    <!---==SCRIPT NAVBAR PIE DE PAGINA==--->
-    <script src="/javascript/navbar_pie_de_pagina.js"></script>
 </body>
 
 </html>
