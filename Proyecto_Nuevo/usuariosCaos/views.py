@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from .models import UsuariosCaosNews,Genero
 # Create your views here.
 
 def registro(request):
@@ -25,3 +26,23 @@ def api(request):
 
 def index(request):
     return render(request, 'usuariosCaos/index.html')
+
+
+
+def formulario(request):
+    usuarios = UsuariosCaosNews.objects.all()
+    context = {"usuarios": usuarios}
+    return render(request, 'usuariosCaos/formulario.html', context)
+
+
+def crud(request):
+        usuarios = UsuariosCaosNews.objects.all()
+        context = {"usuarios": usuarios}
+        return render(request, 'usuariosCaos/usuariosC_list.html', context)
+
+def usuariosAdd(request):
+        if request.method is not "POST":
+                generos=Genero.objects.all()
+                context={'generos':generos}
+                return render(request, 'usuariosCaos/usuariosC_add.html', context)
+
