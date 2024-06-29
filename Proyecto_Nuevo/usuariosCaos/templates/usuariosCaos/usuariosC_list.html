@@ -2,54 +2,46 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UsuariosC</title>
-</head>
-<body>
-
-    <h1>Editar Datos de Usuarios Caos News</h1><br>
-    <br>
+  </head>
+  <body>
+    <h1>Editar Datos de Usuarios Caos News</h1>
+    <br />
+    <br />
 
     <button type="button">
-        <a href="{% url 'usuariosAdd' %}"> Agregar </a>
+      <a href="{% url 'usuariosAdd' %}"> Agregar </a>
     </button>
 
-    <div id="idMensajes">
-        {% if mensajes %}
-            {{mensaje}}
-        {% endif %}
-    </div>
-    
+    <div id="idMensajes">{% if mensajes %} {{mensaje}} {% endif %}</div>
 
     <table>
-            {% if usuarios %}
-                <th>Rut</th>
-                <th>Nombre</th>
-                <th>Apellido P.</th>
-                <th>Eliminar</th>
-                <th>Modificar</th>
-                {% for usuario in usuarios %}
-                    <tr>
-                        <td>    {{usuario.rut}}
-                        <td>    {{usuario.nombre}}
-                        <td>    {{usuario.apellido_paterno}}
-                        <td> <a href="{% url 'alumnos_del' pk=usuario.rut %}">Eliminar</a>
-                        <td> <a href="{% url 'alumnos_findEdit' pk=usuario.rut %}">Modificar</a>
+      {% if usuarios %}
+      <th>Rut</th>
+      <th>Nombre</th>
+      <th>Apellido P.</th>
+      <th>Eliminar</th>
+      <th>Modificar</th>
+      {% for usuario in usuarios %}
+      <tr>
+        <td>{{usuario.rut}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellido_paterno}}</td>
+        <td><a href="#">Eliminar</a></td>
+        <td><a href="#">Modificar</a></td>
+      </tr>
 
-                    </tr>
-                {% endfor %}
-            {% endif %}
+      {% endfor %} {% endif %}
     </table>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $("#idMensajes").delay(2000).fadeOut("slow")
-        })
+      $(document).ready(function () {
+        $("#idMensajes").delay(2000).fadeOut("slow");
+      });
     </script>
-
-
-</body>
+  </body>
 </html>
