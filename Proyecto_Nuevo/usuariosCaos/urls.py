@@ -14,6 +14,10 @@ urlpatterns = [
     path('formulario', views.formulario, name='formulario'),
     path('crud', views.crud, name='crud'),
     path('usuariosAdd', views.usuariosAdd, name='usuariosAdd'),
+    path('usuarios_del/<str:pk>', views.usuarios_del, name='usuarios_del'),
+    path('usuarios_finEdit/<str:pk>/', views.usuarios_finEdit, name='usuarios_finEdit'),
+    path('usuariosUpdate', views.usuariosUpdate, name='usuariosUpdate'),
+
 ]
 
 
