@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+from .views import login_view, logout_view, protected_view
+
 urlpatterns = [
     path('registro', views.registro, name='registro'),
     path('carrito', views.carrito, name='carrito'),
@@ -21,6 +23,10 @@ urlpatterns = [
     path('generosAdd', views.generosAdd, name='generosAdd'),
     path('generos_del/<str:pk>', views.generos_del, name='generos_del'),
     path('generos_edit/<str:pk>', views.generos_edit, name='generos_edit'),
+
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('protected/', protected_view, name='protected'),
 ]
 
 
