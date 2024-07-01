@@ -10,7 +10,7 @@
         {% if usuario %}
             <h2>Formulario Actualizar Datos</h2>
 
-            <form action="{% url 'usuarioUpdate' pk=usuario.rut %}" method="POST">
+            <form action="{% url 'usuarioUpdate' %}" method="POST">
                 {% csrf_token %}
 
                 <pre>Rut:       <input type="text" name="rut" value="{{ usuario.rut }}" readonly></pre>

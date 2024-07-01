@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UsuariosC</title>
+</head>
+<body>
+    <h1>Editar Generos</h1>
+    <br />
+    <br />
+
+    <button type="button">
+        <a href="{% url 'generosAdd' %}"> Agregar </a>
+    </button>
+
+    <div id="idMensajes">
+        {% if mensajes %}
+            {% for mensaje in mensajes %}
+                <p>{{ mensaje }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <table>
+        {% if generos %}
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for genero in generos %}
+                    <tr>
+                        <td>{{ genero.id_genero }}</td>
+                        <td>{{ genero.nombre }}</td>
+                        <td><a href="{% url 'generos_del' pk=genero.id_genero %}">Eliminar</a></td>
+                        <td><a href="{% url 'generos_edit' pk=genero.id_genero %}">Modificar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% else %}
+            <p>No hay géneros disponibles.</p>
+        {% endif %}
+    </table>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+</body>
+</html>
+
