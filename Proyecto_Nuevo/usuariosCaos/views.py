@@ -4,11 +4,18 @@ from .models import UsuariosCaosNews,Genero
 from .forms import GeneroForm
 
 from django.contrib.auth import authenticate, login, logout
-from .forms import LoginForm
 
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+
+
+from django.contrib.auth.forms import UserCreationForm
+from .forms import RegisterForm, LoginForm
+
+
+from django.contrib.auth.models import User
+
 
 # Create your views here.
 
@@ -34,8 +41,10 @@ def api(request):
     return render(request, 'usuariosCaos/API.html')
 
 def index(request):
-    return render(request, 'usuariosCaos/index.html')
-
+    context = {
+        'is_admin': request.user.is_superuser,
+    }
+    return render(request, 'usuariosCaos/index.html', context)
 
 def formulario(request):
     usuarios = UsuariosCaosNews.objects.all()
@@ -262,3 +271,48 @@ def logout_view(request):
 @login_required
 def protected_view(request):
     return render(request, 'usuariosCaos/protected.html')
+
+
+
+
+def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = RegisterForm()
+    return render(request, 'usuariosCaos/register.html', {'form': form})
+
+def login_view(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                if user.is_superuser:
+                    return redirect('index')
+                else:
+                    return redirect('index_user')
+            else:
+                return render(request, 'usuariosCaos/login.html', {'form': form, 'error': 'Invalid credentials'})
+    else:
+        form = LoginForm()
+    return render(request, 'usuariosCaos/login.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+@login_required
+def index(request):
+    return render(request, 'usuariosCaos/index.html')
+
+@login_required
+def index_user(request):
+    return render(request, 'usuariosCaos/indexUser.html')
+

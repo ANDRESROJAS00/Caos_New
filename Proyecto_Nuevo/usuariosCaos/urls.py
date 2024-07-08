@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-from .views import login_view, logout_view, protected_view
+from .views import register_view, login_view, logout_view, protected_view
 
 urlpatterns = [
     path('registro', views.registro, name='registro'),
@@ -11,7 +11,7 @@ urlpatterns = [
     path('chile', views.chile, name='chile'),
     path('mundo', views.mundo, name='mundo'),
     path('api', views.api, name='api'),
-    path('index', views.index, name='index'),
+    path('index/', views.index, name='index'),
     path('formulario', views.formulario, name='formulario'),
     path('crud', views.crud, name='crud'),
     path('usuariosAdd', views.usuariosAdd, name='usuariosAdd'),
@@ -24,9 +24,11 @@ urlpatterns = [
     path('generos_del/<str:pk>', views.generos_del, name='generos_del'),
     path('generos_edit/<str:pk>', views.generos_edit, name='generos_edit'),
 
-    path('login/', login_view, name='login'),
-    path('logout/', logout_view, name='logout'),
-    path('protected/', protected_view, name='protected'),
+    path('register/', views.register_view, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+
+    path('index_user/', views.index_user, name='index_user'),
 ]
 
 

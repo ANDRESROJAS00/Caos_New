@@ -103,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Authentication settings
 LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/index/'
 
 
 # Internationalization

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Protected Page</title>
+    <title>Protected</title>
 </head>
 <body>
     <h1>Protected Page</h1>
-    <p>Welcome, {{ user.username }}!</p>
+    <p>This is a protected page. Only authenticated users can see this.</p>
+    {% if is_admin %}
+        <p>You are an administrator.</p>
+        <a href="/admin/">Go to Admin Panel</a>
+    {% else %}
+        <p>You are a regular user.</p>
+    {% endif %}
     <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>
