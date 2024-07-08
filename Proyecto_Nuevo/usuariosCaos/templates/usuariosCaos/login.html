@@ -16,5 +16,7 @@
     {% if error %}
         <p style="color: red;">{{ error }}</p>
     {% endif %}
+    
+    <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Regístrate aquí</a></p>
 </body>
 </html>

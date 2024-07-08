@@ -1,8 +1,6 @@
 from django.urls import path
 from . import views
 
-from .views import register_view, login_view, logout_view, protected_view
-
 urlpatterns = [
     path('registro', views.registro, name='registro'),
     path('carrito', views.carrito, name='carrito'),
@@ -25,6 +23,7 @@ urlpatterns = [
 
     path('index_user/', views.index_user, name='index_user'),
 ]
+
 
 
 
